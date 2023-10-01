@@ -5,7 +5,9 @@ let btn = document.querySelector("button");
 
 msgCards.forEach((ele) => {
   ele.addEventListener("click", () => {
-    ele.classList.toggle("unread");
+    ele.classList.remove("unread");
+    msgUnreadCards = [...document.querySelectorAll(".msg-card.unread")];
+    notiNum.textContent = msgUnreadCards.length;
   });
 });
 
@@ -17,3 +19,4 @@ btn.addEventListener("click", () => {
 });
 
 notiNum.textContent = msgUnreadCards.length;
+
