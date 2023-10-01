@@ -5,7 +5,7 @@ let btn = document.querySelector("button");
 
 msgCards.forEach((ele) => {
   ele.addEventListener("click", () => {
-    ele.classList.remove("unread");
+    ele.classList.toggle("unread");
     msgUnreadCards = [...document.querySelectorAll(".msg-card.unread")];
     notiNum.textContent = msgUnreadCards.length;
   });
@@ -19,4 +19,3 @@ btn.addEventListener("click", () => {
 });
 
 notiNum.textContent = msgUnreadCards.length;
-
